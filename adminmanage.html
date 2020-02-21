@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理员面板-SoccerX足球装备网</title>
+    <link rel="stylesheet" href="./css/manage.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script type="text/javascript" src="./javascript/wrCookies.js"></script>
+    <script src="./javascript/adminRender.js"></script>
+    <script>
+        function quit(){
+            if(confirm("是否要退出登录？")){
+                window.location="./php/adminQuit.php";
+            }
+        }
+        window.onload=function(){orderlist();}
+    </script>
+</head>
+<body>
+<div class="topbar">
+    <div class="logo">
+        <a href="./index.html">
+            <img src="./img/logo.png" width="140px" height="40px">
+        </a>
+    </div>
+    <div class="userarea">
+        <script>
+            var adminname = "";
+            adminname = readCookie("adminname");
+            if(adminname == ""){
+                alert("你还没有登录");window.location="./admin.html";
+            }
+        </script>
+    </div>
+</div>
+<div class="section asection">
+    <div class="controlpanel">
+        <span class="welcome">欢迎你，<script>document.write(readCookie("adminname"));</script></span>
+        <ul>
+            <li onclick="orderlist()">管理订单</li>
+            <li onclick="accountList()">管理用户</li>
+            <li onclick="getAdmininfo()">修改密码</li>
+            <li onclick="quit()">退出登录</li>
+        </ul>
+    </div>
+    <div class="operation">
+        <div class="order aorder" id="order"></div>
+        <div class="account" id="account"></div>
+        <div class="edit" id="adminEdit"></div>
+    </div>
+    <div class="push"></div>
+</div>
+<div class="footer"></div>
+</body>
+</html>

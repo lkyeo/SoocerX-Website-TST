@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>上海绿地申花主场 Nike Breathe</title>
+    <link rel="stylesheet" href="../css/content.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script type="text/javascript" src="../javascript/wrCookies.js"></script>
+</head>
+<body>
+    <div class="topbar">
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../img/logo.png" width="140px" height="40px">
+            </a>
+        </div>
+        <div class="userarea">
+            <script>
+                var username = "";
+                username = readCookie("username");
+                if(username != ""){
+                    document.write("<a href=\"../user.php\">欢迎你，"+ username + "</a>");
+                }
+                else{
+                    document.write("<a href=\"../login.html\">加入/登录SoccerX账号</a>")
+                }
+
+                document.write("<a href=\"../cart.html\">购物车</a>");
+            </script>        
+        </div>
+    </div>
+    <div class="header">
+        <div class="navbar">
+            <ul>
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="../c/tops.html">球衣</a></li>
+                <li><a href="../c/shoes.html">球鞋</a></li>
+                <li><a href="../c/balls.html">足球</a></li>
+                <li><a href="../c/accessories.html">配件/装备</a></li>
+            </ul>
+            <div class="search">
+                <form action="../php/search.php" method="POST" class="search-form">
+                    <input type="search" name="search" class="search-text"/>
+                    <input type="submit" value="&#xf002" class="search-btn fas"/>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="leftcontent">
+            <img src="../img/goods/accessories/1.jpg">
+        </div>
+        <div class="rightbar">
+            <div class="info">
+                <span class="introduction">大童足球球迷短裤</span>
+                <span class="price">￥299</span>
+            </div>
+            <div class="name">
+                <span class="name">2018/19 赛季切尔西主客场</span>
+            </div>
+            <form method="post" action="../php/addCart.php">
+                <input type="radio" class="r1" name="size" value="S" checked>S
+                <input type="radio" class="r1" name="size" value="M">M
+                <input type="radio" class="r1" name="size" value="L">L
+                <input type="radio" class="r1" name="size" value="XL">XL
+                <input type="radio" class="r1" name="size" value="XXL">XXL
+                <input type="submit" class="s1" value="加入购物车">
+            </form>
+        </div>
+    </div>
+    <div class="bottombar">
+        <div class="text">
+            <span>© 2019 随便什么,公司. 保留所有权利</span>
+        </div>
+    </div>
+</body>
+</html>

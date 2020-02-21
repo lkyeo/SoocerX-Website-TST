@@ -1,0 +1,429 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Heiti SC", "ST Heiti", 华文黑体, "Microsoft YaHei", 雅黑体, SimHei, 黑体, sans-serif;
+}
+.topbar{
+    border-bottom: 1px solid #e0e0e0;
+    z-index: 100;
+    width:100%;
+    height:40px;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.logo{
+    float: left;
+    width: 140px;
+    height: 40px;
+    margin-left: 20px;
+}
+.userarea{
+    float: right;
+    height: 40px;
+    margin-right: 15px;
+}
+.userarea a{
+    text-decoration: none;
+    height:40px;
+    line-height: 40px;
+    padding: 12px 12px;
+    color: #8d8d8d;
+    font-size: 12px;
+
+}
+.userarea a:hover{
+    color:#000;
+    border-bottom: 2px solid black;
+}
+.header{
+    border-bottom: 1px solid #e0e0e0;
+    z-index: 99;
+    width:100%;
+    height:70px;
+    background: white;
+    position:fixed;
+    top:40px;
+}
+.header .navbar{
+    width: 1060px;
+    height: 70px;
+    position: relative;
+    margin:0 auto;
+}
+.header .navbar ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+
+}
+.header .navbar li{
+    display: inline-block;
+}
+.header .navbar li a{
+    display:block;
+    font-size: 16px;
+    color:black;
+    text-align: center;
+    padding:24px 26px;
+    text-decoration: none;
+}
+.header .navbar li a:hover{
+    border-bottom: 2px solid #000;
+}
+.header .navbar .active{
+    border-bottom: 2px solid #000;
+}
+.navbar .search{
+    display:block;
+    position: absolute;
+    right:0;
+    top:50%;
+    margin-top: -20px;
+    width:220px;
+    height:40px;
+}
+.navbar .search .search-text{
+    position:absolute;
+    top:0;
+    right:0px;
+    display: block;
+    padding-left: 1em;
+    width: 250px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 17px;
+    border: 1px solid #e0e0e0;
+    outline:0;
+}
+.navbar .search .search-btn{
+    position:absolute;
+    top: 0;
+    right: 0px;
+    display:block;
+    width: 42px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    outline:0;
+    border: 1px solid #e0e0e0;
+    background: white;
+    cursor: pointer;
+}
+.section{
+    padding: 48px;
+    z-index: 0;
+    position: relative;
+    width:100%;
+    overflow: hidden;
+    top:160px;
+}
+.asection{
+    top:60px;
+}
+.section .controlpanel{
+    display: inline-block;
+    width: 376px;
+    height: 427px;
+    vertical-align: top;
+}
+.section .controlpanel span{
+    font-size: 24px;
+}
+.section .controlpanel ul{
+    margin-top: 24px;
+    list-style-type: none;
+}
+.section .controlpanel ul li{
+    padding: 16px 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 16px;
+    color: #8d8d8d;
+    cursor: pointer;
+
+}
+.section .controlpanel ul li:hover{
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+.section .operation{
+    display: inline-block;
+    width: 700px;
+    vertical-align: top;
+    margin-left: 20px;
+    padding: 0px 16px;
+    /* border: 1px solid slateblue; */
+}
+.section .operation .order{
+    width: 100%;
+}
+.section .operation .order .orderinfo{
+    margin-bottom: 48px;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    width: 100%;
+}
+.section .operation .order .orderinfo .title{
+    display: block;
+    padding-top: 12px;
+    font-size: 24px;
+    letter-spacing: -1px;
+    font-style: normal;
+    font-weight: 400;
+}
+.section .operation .order .orderinfo .item{
+    width: 100%;
+    padding: 12px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+.section .operation .order .orderinfo .item .bg{
+    display: inline-block;
+    vertical-align: top;
+    width:180px;
+    height:180px;
+    border:1px solid white;
+    overflow: hidden;
+}
+.section .operation .order .orderinfo .item .bg img{
+    height: 180px;
+}
+.section .operation .order .orderinfo .item .iteminfo{
+    position: relative;
+    width: 489px;
+    height: 180px;
+    padding: 0px 10px;
+    vertical-align: top;
+    display: inline-block;
+}
+.section .operation .order .orderinfo .item .iteminfo .name{
+    display: inline-block;
+    height:27px;
+    line-height: 27px;
+    font-size: 22px;
+    font-weight: 500;
+}
+.section .operation .order .orderinfo .item .iteminfo .total{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height:27px;
+    line-height: 27px;
+    font-size: 18px;
+    font-style: normal;
+    color:#8d8d8d;
+    font-weight: 400;
+}
+.section .operation .order .orderinfo .item .iteminfo .info{
+    height: 27px;
+    margin-top: 6px;
+    line-height: 27px;
+    font-size: 16px;
+    font-style: normal;
+    color:#8d8d8d;
+    font-weight: 400;
+}
+.section .operation .order .orderinfo .item .iteminfo .sizecount{
+    display: block;
+    margin-top: 6px;
+    height:16px;
+    line-height: 16px;
+    font-size: 16px;
+    font-style: normal;
+    color:#8d8d8d;
+    font-weight: 400;
+}
+.section .operation .order .orderinfo .summary{
+    display: inline-block;
+    padding: 12px 0;
+    /* height:27px; */
+}
+.section .operation .order .orderinfo .summary span{
+    height:27px;
+    line-height: 27px;
+    font-size: 14px;
+    font-style: normal;
+    color:#8d8d8d;
+    font-weight: 400;
+
+}
+.section .operation .order .orderinfo .modify{
+    float: right;
+    padding: 12px 0;
+}
+.section .operation .order .orderinfo .modify button{
+    cursor: pointer;
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+    color: rgb(141, 141, 141);
+    padding: 4px 0px;
+    border: none;
+    background: none;
+    outline:0;
+}
+.section .operation .order .orderinfo .modify button:hover{
+    /* border-bottom: 1px solid; */
+    color: #000;
+}
+
+.section .operation .edit{
+    width: 100%;
+}
+.section .operation .edit .tag{
+    display: block;
+    height:27px;
+    line-height: 27px;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 24px;
+
+}
+.section .operation .edit span{
+    width: 100%;
+    display: block;
+    font-size: 17px;
+    line-height: 1.75;
+    font-weight: 500;
+}
+.section .operation .edit .customerinfo input{
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    border: 1px solid #8d8d8d;
+    outline:0;
+    border-radius: 2px;
+    padding-left: 1em;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin-bottom: 24px;
+}
+.section .operation .edit .save{
+    display: block;
+    width: 100%;
+    height: 44px;
+    padding: 24px 0;
+    border-top: 1px solid #e0e0ee;
+    border-bottom: 1px solid #e0e0e0;
+}
+.section .operation .edit .save .errormsg{
+    display: inline-block;
+    width: 350px;
+    padding: 2px 2px;
+    font-size: 14px;
+    line-height: 2.2;
+    color: red;
+}
+.section .operation .edit .save .btnsave{
+    float: right;
+    padding: 2px 24px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 2.2;
+    outline:0;
+    border: 1px solid #ccc;
+    background: white;
+    border-radius: 20px;
+}
+.footer{
+    background: black;
+}
+.footer, .push{
+    height: 300px;
+}
+.aorder select{
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    border: 1px solid #8d8d8d;
+    outline:0;
+    border-radius: 2px;
+    padding-left: 1em;
+    text-align: center;
+    margin-bottom: 24px;
+    cursor: pointer;
+}
+.aorder select option{
+    color: #8d8d8d;
+}
+.asection .operation .account{
+    width: 100%;
+}
+.asection .operation .account .customer{
+    margin-bottom: 48px;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    width: 100%;
+}
+.asection .operation .account .customer .customerinfo{
+    width: 100%;
+    padding: 12px 0;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+}
+.asection .operation .account .customer .customerinfo .uid{
+    position: absolute;
+    top: 14px;
+    right: 0;
+    height:27px;
+    line-height: 27px;
+    font-size: 18px;
+    font-style: normal;
+    color:#8d8d8d;
+    font-weight: 400;
+}
+.asection .operation .account .customer .customerinfo .username{
+    display: inline-block;
+    height:27px;
+    line-height: 27px;
+    font-size: 22px;
+    font-weight: 500;
+}
+.asection .operation .account .customer .customerinfo span{
+    display: block;
+    height: 27px;
+    margin-top: 6px;
+    line-height: 27px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+}
+.asection .operation .account .customer .amount{
+    display: inline-block;
+    padding: 12px 0;
+}
+.asection .operation .account .customer .amount span{
+    height:27px;
+    line-height: 27px;
+    font-size: 14px;
+    font-style: normal;
+    color:#8d8d8d;
+    font-weight: 400;
+}
+.asection .operation .account .customer .delete{
+    float: right;
+    padding: 12px 0;
+}
+.asection .operation .account .customer .delete button{
+    cursor: pointer;
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+    color: rgb(141, 141, 141);
+    padding: 4px 0px;
+    border: none;
+    background: none;
+    outline:0;
+}
+.asection .operation .account .customer .delete button:hover{
+    color: #000;
+}
+
+
+

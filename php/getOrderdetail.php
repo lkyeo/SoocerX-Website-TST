@@ -1,0 +1,14 @@
+<?php
+    $oid = $_GET['oid'];
+    $conn = new mysqli('localhost','root','root','soccerx');
+    if($conn->connect_error){
+        echo '<script>alert("数据库连接失败")；history.go(-1);</script>';
+    }
+    else{
+        $sql = "select * from orderdetail where oid = $oid";
+        $res = mysqli_query($conn,$sql);
+        $row = mysqli_fetch_all($res,MYSQLI_ASSOC);
+        $str = json_encode($row,JSON_UNESCAPED_UNICODE);
+        echo $str;
+    }
+?>

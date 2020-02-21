@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户信息-SoccerX足球装备网</title>
+    <link rel="stylesheet" href="./css/manage.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script type="text/javascript" src="./javascript/wrCookies.js"></script>
+    <script src="./javascript/userrender.js"></script>
+    <script>
+        function showOrder(){
+            document.getElementById("edit").style.display="none";
+            document.getElementById("order").style.display="";
+        }
+        function showEdit(){
+            document.getElementById("edit").style.display="";
+            document.getElementById("order").style.display="none";
+        }
+        function quit(){
+            if(confirm("是否要退出登录？")){
+                window.location="./php/clearUser.php";
+            }
+        }
+        window.onload=function(){orderlist();showOrder();getCustomerinfo();}
+    </script>
+</head>
+<body>
+<div class="topbar">
+    <div class="logo">
+        <a href="./index.html">
+            <img src="./img/logo.png" width="140px" height="40px">
+        </a>
+    </div>
+    <div class="userarea">
+        <script>
+            var username = "";
+            username = readCookie("username");
+            if(username != ""){
+                document.write("<a href=\"./cart.html\">购物车</a>");
+            }
+            else{
+                alert("你还没有登录");window.location="./login.html";
+            }
+        </script>
+    </div>
+</div>
+<div class="header">
+    <div class="navbar">
+        <ul>
+            <li><a href="./index.html">首页</a></li>
+            <li><a href="./c/tops.html">球衣</a></li>
+            <li><a href="./c/shoes.html">球鞋</a></li>
+            <li><a href="./c/balls.html">足球</a></li>
+            <li><a href="./c/accessories.html">配件/装备</a></li>
+        </ul>
+        <div class="search">
+            <form action="./php/search.php" method="POST" class="search-form">
+                <input type="search" name="search" class="search-text"/>
+                <input type="submit" value="&#xf002" class="search-btn fas"/>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="section">
+    <div class="controlpanel">
+        <span class="welcome">欢迎你，<script>document.write(readCookie("username"));</script></span>
+        <ul>
+            <li onclick="showOrder()">我的订单</li>
+            <li onclick="showEdit()">修改信息</li>
+            <li onclick="quit()">退出登录</li>
+        </ul>
+    </div>
+    <div class="operation">
+        <div class="order" id="order">
+            <!-- <script>orderlist();</script>
+            <script>showOrder();</script> -->
+        </div>
+        <div class="edit" id="edit">
+            <span class="tag">修改你的收货信息</span>
+            <form action="./php/saveCustomerInfo.php" method="POST">
+                <div class="customerinfo">
+                    <span>姓名：</span>
+                    <input type="text" name="name" id="name" onchange="check()">
+                    <span>地址：</span>
+                    <input type="text" name="address" id="address" onchange="check()">
+                    <span>电话：</span>
+                    <input type="text" name="phone" id="phone" onchange="check()">
+                </div>
+                <div class="save">
+                    <span class="errormsg" id="errormsg"></span>
+                    <input type="submit" value="保存" class="btnsave" id="save">
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <div class="push"></div>
+</div>
+<div class="footer"></div>
+</body>
+</html>
